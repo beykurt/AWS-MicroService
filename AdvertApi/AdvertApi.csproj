@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>2.0.0</Version>
+    <PackageId>AdvertApi</PackageId>
+    <Authors>Burak Beykurt</Authors>
+    <Company>None</Company>
+    <Product>AdvertApi</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.101.56" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.101.24" />
+    <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdvertApi.Models\AdvertApi.Models.csproj" />
+  </ItemGroup>
+
+</Project>

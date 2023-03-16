@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "SignIn Page";
+}
+
+@model WebAdvert.Web.Models.Accounts.LoginModel;
+
+<div class="row">
+    <div class="col-md-7">
+        <h5 class="alert alert-info">
+            <img src="https://cdn-icons-png.flaticon.com/512/1432/1432525.png" style="width: 32px;" />
+            Login using your email address and password
+        </h5>
+        <hr />
+        <form method="post" asp-controller="Accounts" asp-action="Login">
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <div class="chechbox">
+                    <input asp-for="RememberMe"/>
+                    @Html.DisplayName("Remember Me")
+                </div>
+            </div>
+
+            <br />
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="alert alert-info mt-5">
+                Not a member yet? <a asp-action="Signup" asp-controller="Accounts" class="btn">Click here to Sign Up!</a>
+            </div>
+        </form>
+    </div>
+</div>
